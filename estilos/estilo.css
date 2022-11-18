@@ -1,0 +1,81 @@
+*
+{
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 5px;
+}
+
+body
+{
+    margin: -10px;
+}
+
+.contenedor_principal
+{
+    background-color: #f2f1f6;
+    border-radius: 7px;
+    width: 350px;
+    margin: auto;
+    filter: drop-shadow(2px 3px 5px gray);
+}
+
+.circular--square
+{
+    border-radius: 50%;
+    width: 75px;
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    padding: 2%;
+}
+
+.nombre
+{
+    text-align: center;
+    font-size: 28px;
+}
+
+.puesto
+{
+    text-align: center;
+    color: #8e8d91;
+}
+
+.seccion
+{
+    background-color: #fff;
+    border: #fff;
+    border-radius: 7px;
+    margin: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.variable
+{
+    font-size: 16px;
+    color: #007aff;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.cuadros
+{
+    float: left;
+    background-color: #fff;
+    border-radius: 7px;
+    margin: 5px;
+    padding: 8px;
+    color: #007aff;
+    width: 17.5%;
+    text-align: center;
+}
+
+.icono
+{
+    width: 22px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: -18px;
+}
