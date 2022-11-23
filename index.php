@@ -1,7 +1,7 @@
 <?php
     require "funciones/conexion.php";
 
-    echo $correo = $_GET["mail"];
+    $correo = $_GET["mail"];
 
     $consulta = mysqli_query($conexion,"select * from vcard.usuario where correo='$correo'");
     $tabla = mysqli_fetch_array($consulta);
