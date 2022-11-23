@@ -22,11 +22,13 @@ body
 .circular--square
 {
     border-radius: 50%;
-    width: 75px;
+    width: 100px;
+    height: 100px;
     display: block;
     margin: auto;
     margin-top: 3%;
     padding: 2%;
+    object-fit: cover;
 }
 
 .nombre
