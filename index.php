@@ -1,5 +1,5 @@
 <?php
-    require "funciones/conexion.php";
+    include "funciones/conexion.php";
 
     $correo = $_GET["mail"];
 
@@ -59,11 +59,11 @@
         </div>-->
         
         <div class="seccion">   <!--style="margin-top: 77px;"-->
-            <?php echo $descripcion_telefono1?><div class="variable"><?php echo $telefono1?></div>
+            <?php echo $descripcion_telefono1?><div class="variable" onclick="copiar('<?php echo $telefono1?>'), mensaje()"><?php echo $telefono1?></div>
             <?php 
                 if($descripcion_telefono2 && $telefono2 != "")
                 {
-                    echo $descripcion_telefono2?><div class="variable"><?php echo $telefono2?></div><?php
+                    echo $descripcion_telefono2?><div class="variable" onclick="copiar('<?php echo $telefono2?>')"><?php echo $telefono2?></div><?php
                 }
                     else
                     {
@@ -71,7 +71,7 @@
                     }
                 if($descripcion_telefono3 && $telefono3 != "")
                 {
-                    echo $descripcion_telefono3?><div class="variable"><?php echo $telefono3?></div><?php
+                    echo $descripcion_telefono3?><div class="variable" onclick="copiar('<?php echo $telefono3?>')"><?php echo $telefono3?></div><?php
                 }
                     else
                     {
@@ -81,18 +81,18 @@
         </div>
 
         <div class="seccion">Correo
-            <div class="variable"><?php echo $correo?></div>
+            <div class="variable" onclick="copiar('<?php echo $correo?>')"><?php echo $correo?></div>
         </div>
 
         <div class="seccion">Página Web
-            <div class="variable"><?php echo $paginaWeb?></div>
+            <div class="variable"><a href="<?php echo $paginaWeb?>" target="_blank" style="text-decoration-line: none;"><?php echo $paginaWeb?></a></div>
         </div>
 
         <div class="seccion">
             <?php 
                 if($descripcion_cuenta1 && $cuenta1 != "")
                 {
-                    echo $descripcion_cuenta1?><div class="variable"><?php echo $cuenta1?></div><?php
+                    echo $descripcion_cuenta1?><div class="variable" onclick="copiar('<?php echo $cuenta1?>')"><?php echo $cuenta1?></div><?php
                 }
                     else
                     {
@@ -100,7 +100,7 @@
                     }
                 if($descripcion_cuenta2 && $cuenta2 != "")
                 {
-                    echo $descripcion_cuenta2?><div class="variable"><?php echo $cuenta2?></div><?php
+                    echo $descripcion_cuenta2?><div class="variable" onclick="copiar('<?php echo $cuenta2?>')"><?php echo $cuenta2?></div><?php
                 }
                     else
                     {
@@ -108,7 +108,7 @@
                     }
                 if($descripcion_cuenta3 && $cuenta3 != "")
                 {
-                    echo $descripcion_cuenta3?><div class="variable"><?php echo $cuenta3?></div><?php
+                    echo $descripcion_cuenta3?><div class="variable" onclick="copiar('<?php echo $cuenta3?>')"><?php echo $cuenta3?></div><?php
                 }
                     else
                     {
@@ -118,12 +118,15 @@
         </div>
 
         <div class="seccion">Dirección
-            <div class="variable" style="color: #000;"><?php echo $direccion?><br><?php echo $direccion2?></div>
+            <div class="variable" onclick="copiar('<?php echo $direccion.' '.$direccion2?>')"><?php echo $direccion?><br><?php echo $direccion2?></div>
         </div>
 
-        <div class="seccion">
-            <div class="variable">Descargar Contacto</div>
+        <div class="seccion" style="background-color: #007aff;">
+            <div class="variable" style="background-color: #007aff; color: #fff; text-align: center;">Descargar Contacto</div>
         </div>
     </div>
+
+    <span class="mensaje">Copiado en el portapapeles</span>
+
 </body>
 </html>

@@ -17,7 +17,6 @@ div
 .contenedor_principal
 {
     background-color: #f2f1f6;
-    border-radius: 7px;
     margin: auto;
 }
 
@@ -55,7 +54,7 @@ div
     padding: 8px;
 }
 
-.variable
+.variable, a:link, a:visited, a:hover, a:active
 {
     font-size: 18px;
     color: #007aff;
@@ -75,14 +74,29 @@ div
     text-align: center;
 }
 
-.icono
+.mensaje
+{
+    background: #467a49e0;
+    color: #fff;
+    position: absolute;
+    top: 180px;
+    width: 92%;
+    left: 0;
+    margin-left: 2%;
+    padding: 2%;
+    border-radius: 7px;
+    text-align: center;
+    display: none;
+}
+
+/*.icono
 {
     width: 22px;
     display: block;
     margin: auto;
     cursor: pointer;
     margin-bottom: -18px;
-}
+}*/
 
 @media only screen and (min-width: 500px)
 {
@@ -94,13 +108,24 @@ div
     {
         width: 350px;
         filter: drop-shadow(2px 3px 5px gray);
+        border-radius: 7px;
     }
     .nombre
     {
         font-size: 28px;
     }
-    .variable
+    .variable, a:link, a:visited, a:hover, a:active
     {
         font-size: 16px;
+    }
+    .mensaje
+    {
+        top: 173px;
+        width: 324px;
+        padding: 8px;
+        text-align: center;
+        margin: 5px;
+        left: 50%;
+        margin-left: -170px;
     }
 }
