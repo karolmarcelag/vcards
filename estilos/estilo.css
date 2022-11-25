@@ -2,6 +2,7 @@
 {
     font-family: sans-serif;
     font-size: 16px;
+    background-color: #f2f1f6;
 }
 
 body
@@ -103,6 +104,10 @@ div
     *
     {
         font-size: 14px;
+    }
+    body
+    {
+        background-color: #fff;
     }
     .contenedor_principal
     {
