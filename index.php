@@ -59,7 +59,7 @@
         </div>-->
         
         <div class="seccion">   <!--style="margin-top: 77px;"-->
-            <?php echo $descripcion_telefono1?><div class="variable" onclick="copiar('<?php echo $telefono1?>'), mensaje()"><?php echo $telefono1?></div>
+            <?php echo $descripcion_telefono1?><div class="variable" target="_blank" style="text-decoration-line: none;" onclick="copiar('<?php echo $telefono1?>'), mensaje()"><?php echo $telefono1?></div>
             <?php 
                 if($descripcion_telefono2 && $telefono2 != "")
                 {
@@ -80,53 +80,61 @@
             ?>
         </div>
 
-        <div class="seccion">Correo
+        <div class="seccion">Email
             <div class="variable" onclick="copiar('<?php echo $correo?>')"><?php echo $correo?></div>
         </div>
 
-        <div class="seccion">Página Web
+        <div class="seccion">Website
             <div class="variable"><a href="<?php echo $paginaWeb?>" target="_blank" style="text-decoration-line: none;"><?php echo $paginaWeb?></a></div>
         </div>
 
-        <div class="seccion">
-            <?php 
-                if($descripcion_cuenta1 && $cuenta1 != "")
-                {
-                    echo $descripcion_cuenta1?><div class="variable" onclick="copiar('<?php echo $cuenta1?>')"><?php echo $cuenta1?></div><?php
-                }
-                    else
+        <?php
+        if($cuenta1 || $cuenta2 || $cuenta3 != "")
+        {?>
+            <div class="seccion">
+                <?php 
+                    if($descripcion_cuenta1 && $cuenta1 != "")
                     {
-                        ?><div class="variable" style="display: none;"></div><?php
+                        echo $descripcion_cuenta1?><div class="variable" onclick="copiar('<?php echo $cuenta1?>')"><?php echo $cuenta1?></div><?php
                     }
-                if($descripcion_cuenta2 && $cuenta2 != "")
-                {
-                    echo $descripcion_cuenta2?><div class="variable" onclick="copiar('<?php echo $cuenta2?>')"><?php echo $cuenta2?></div><?php
-                }
-                    else
+                        else
+                        {
+                            ?><div class="variable" style="display: none;"></div><?php
+                        }
+                    if($descripcion_cuenta2 && $cuenta2 != "")
                     {
-                        ?><div class="variable" style="display: none;"></div><?php
+                        echo $descripcion_cuenta2?><div class="variable" onclick="copiar('<?php echo $cuenta2?>')"><?php echo $cuenta2?></div><?php
                     }
-                if($descripcion_cuenta3 && $cuenta3 != "")
-                {
-                    echo $descripcion_cuenta3?><div class="variable" onclick="copiar('<?php echo $cuenta3?>')"><?php echo $cuenta3?></div><?php
-                }
-                    else
+                        else
+                        {
+                            ?><div class="variable" style="display: none;"></div><?php
+                        }
+                    if($descripcion_cuenta3 && $cuenta3 != "")
                     {
-                        ?><div class="variable" style="display: none;"></div><?php
+                        echo $descripcion_cuenta3?><div class="variable" onclick="copiar('<?php echo $cuenta3?>')"><?php echo $cuenta3?></div><?php
                     }
-            ?>
-        </div>
+                        else
+                        {
+                            ?><div class="variable" style="display: none;"></div><?php
+                        }
+                ?>
+            </div>
+        <?php}
+        else
+        {
+            ?><div class="seccion" style="display: none;"></div><?php
+        }?>
 
-        <div class="seccion">Dirección
+        <div class="seccion">Address
             <div class="variable" onclick="copiar('<?php echo $direccion.' '.$direccion2?>')"><?php echo $direccion?><br><?php echo $direccion2?></div>
         </div>
 
         <div class="seccion" style="background-color: #007aff;">
-            <div class="variable" style="background-color: #007aff; color: #fff; text-align: center;">Descargar Contacto</div>
+            <div class="variable" style="background-color: #007aff; color: #fff; text-align: center;">Download Contact</div>
         </div>
     </div>
 
-    <span class="mensaje">Copiado en el portapapeles</span>
+    <span class="mensaje">Copied to clipboard</span>
 
 </body>
 </html>

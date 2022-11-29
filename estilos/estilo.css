@@ -90,6 +90,11 @@ div
     display: none;
 }
 
+/*::placeholder 
+{ 
+    color: #fff;
+}*/
+
 /*.icono
 {
     width: 22px;
